@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A0BCE5215CF970A0029B3DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BCE5115CF970A0029B3DC /* UIKit.framework */; };
+		5A0BCE5415CF970A0029B3DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BCE5315CF970A0029B3DC /* Foundation.framework */; };
+		5A0BCE5615CF970A0029B3DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BCE5515CF970A0029B3DC /* CoreGraphics.framework */; };
+		5A0BCE5C15CF970A0029B3DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */; };
+		5A0BCE5E15CF970A0029B3DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE5D15CF970A0029B3DC /* main.m */; };
+		5A0BCE6215CF970A0029B3DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6115CF970A0029B3DC /* AppDelegate.m */; };
+		5A0BCE6515CF970A0029B3DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6415CF970A0029B3DC /* ViewController.m */; };
+		5A0BCE6815CF970A0029B3DC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6615CF970A0029B3DC /* ViewController.xib */; };
+		5A0BCE7315CF97650029B3DC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7015CF97650029B3DC /* NSData+Base64.m */; };
+		5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7215CF97650029B3DC /* NSString+Base64.m */; };
+		5A0BCE7B15CF97B40029B3DC /* AuthenticationData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */; };
+		5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BDABF15CFE537004590A4 /* SignInViewController.m */; };
+		5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5BDAC015CFE537004590A4 /* SignInViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A0BCE4D15CF970A0029B3DC /* MyFitLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0BCE5115CF970A0029B3DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5A0BCE5315CF970A0029B3DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5A0BCE5515CF970A0029B3DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5A0BCE5915CF970A0029B3DC /* MyFitLog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFitLog-Info.plist"; sourceTree = "<group>"; };
+		5A0BCE5B15CF970A0029B3DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A0BCE5D15CF970A0029B3DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A0BCE5F15CF970A0029B3DC /* MyFitLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFitLog-Prefix.pch"; sourceTree = "<group>"; };
+		5A0BCE6015CF970A0029B3DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A0BCE6115CF970A0029B3DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A0BCE6315CF970A0029B3DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5A0BCE6415CF970A0029B3DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A0BCE6715CF970A0029B3DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5A0BCE6F15CF97650029B3DC /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		5A0BCE7015CF97650029B3DC /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		5A0BCE7115CF97650029B3DC /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		5A0BCE7215CF97650029B3DC /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthenticationData.plist; sourceTree = "<group>"; };
+		5A5BDABE15CFE537004590A4 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		5A5BDABF15CFE537004590A4 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		5A5BDAC015CFE537004590A4 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A0BCE4A15CF970A0029B3DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0BCE5215CF970A0029B3DC /* UIKit.framework in Frameworks */,
+				5A0BCE5415CF970A0029B3DC /* Foundation.framework in Frameworks */,
+				5A0BCE5615CF970A0029B3DC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A0BCE4215CF970A0029B3DC = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE5715CF970A0029B3DC /* MyFitLog */,
+				5A0BCE5015CF970A0029B3DC /* Frameworks */,
+				5A0BCE4E15CF970A0029B3DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A0BCE4E15CF970A0029B3DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE4D15CF970A0029B3DC /* MyFitLog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A0BCE5015CF970A0029B3DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE5115CF970A0029B3DC /* UIKit.framework */,
+				5A0BCE5315CF970A0029B3DC /* Foundation.framework */,
+				5A0BCE5515CF970A0029B3DC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A0BCE5715CF970A0029B3DC /* MyFitLog */ = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE6015CF970A0029B3DC /* AppDelegate.h */,
+				5A0BCE6115CF970A0029B3DC /* AppDelegate.m */,
+				5A0BCE6315CF970A0029B3DC /* ViewController.h */,
+				5A0BCE6415CF970A0029B3DC /* ViewController.m */,
+				5A0BCE6615CF970A0029B3DC /* ViewController.xib */,
+				5A0BCE5815CF970A0029B3DC /* Supporting Files */,
+				5A0BCE6E15CF97650029B3DC /* Base64 */,
+				5A5BDABE15CFE537004590A4 /* SignInViewController.h */,
+				5A5BDABF15CFE537004590A4 /* SignInViewController.m */,
+				5A5BDAC015CFE537004590A4 /* SignInViewController.xib */,
+			);
+			path = MyFitLog;
+			sourceTree = "<group>";
+		};
+		5A0BCE5815CF970A0029B3DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */,
+				5A0BCE5915CF970A0029B3DC /* MyFitLog-Info.plist */,
+				5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */,
+				5A0BCE5D15CF970A0029B3DC /* main.m */,
+				5A0BCE5F15CF970A0029B3DC /* MyFitLog-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A0BCE6E15CF97650029B3DC /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				5A0BCE6F15CF97650029B3DC /* NSData+Base64.h */,
+				5A0BCE7015CF97650029B3DC /* NSData+Base64.m */,
+				5A0BCE7115CF97650029B3DC /* NSString+Base64.h */,
+				5A0BCE7215CF97650029B3DC /* NSString+Base64.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A0BCE4C15CF970A0029B3DC /* MyFitLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0BCE6B15CF970A0029B3DC /* Build configuration list for PBXNativeTarget "MyFitLog" */;
+			buildPhases = (
+				5A0BCE4915CF970A0029B3DC /* Sources */,
+				5A0BCE4A15CF970A0029B3DC /* Frameworks */,
+				5A0BCE4B15CF970A0029B3DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFitLog;
+			productName = MyFitLog;
+			productReference = 5A0BCE4D15CF970A0029B3DC /* MyFitLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A0BCE4415CF970A0029B3DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Mike Bradford";
+			};
+			buildConfigurationList = 5A0BCE4715CF970A0029B3DC /* Build configuration list for PBXProject "MyFitLog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5A0BCE4215CF970A0029B3DC;
+			productRefGroup = 5A0BCE4E15CF970A0029B3DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A0BCE4C15CF970A0029B3DC /* MyFitLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A0BCE4B15CF970A0029B3DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0BCE5C15CF970A0029B3DC /* InfoPlist.strings in Resources */,
+				5A0BCE6815CF970A0029B3DC /* ViewController.xib in Resources */,
+				5A0BCE7B15CF97B40029B3DC /* AuthenticationData.plist in Resources */,
+				5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A0BCE4915CF970A0029B3DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0BCE5E15CF970A0029B3DC /* main.m in Sources */,
+				5A0BCE6215CF970A0029B3DC /* AppDelegate.m in Sources */,
+				5A0BCE6515CF970A0029B3DC /* ViewController.m in Sources */,
+				5A0BCE7315CF97650029B3DC /* NSData+Base64.m in Sources */,
+				5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */,
+				5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0BCE5B15CF970A0029B3DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5A0BCE6615CF970A0029B3DC /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0BCE6715CF970A0029B3DC /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A0BCE6915CF970A0029B3DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5A0BCE6A15CF970A0029B3DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A0BCE6C15CF970A0029B3DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFitLog/MyFitLog-Prefix.pch";
+				INFOPLIST_FILE = "MyFitLog/MyFitLog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5A0BCE6D15CF970A0029B3DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFitLog/MyFitLog-Prefix.pch";
+				INFOPLIST_FILE = "MyFitLog/MyFitLog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A0BCE4715CF970A0029B3DC /* Build configuration list for PBXProject "MyFitLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0BCE6915CF970A0029B3DC /* Debug */,
+				5A0BCE6A15CF970A0029B3DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0BCE6B15CF970A0029B3DC /* Build configuration list for PBXNativeTarget "MyFitLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0BCE6C15CF970A0029B3DC /* Debug */,
+				5A0BCE6D15CF970A0029B3DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A0BCE4415CF970A0029B3DC /* Project object */;
+}
