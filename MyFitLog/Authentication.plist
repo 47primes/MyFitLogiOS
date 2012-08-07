@@ -4,5 +4,7 @@
 <dict>
 	<key>api_key</key>
 	<string></string>
+	<key>persist_api_key</key>
+	<false/>
 </dict>
 </plist>

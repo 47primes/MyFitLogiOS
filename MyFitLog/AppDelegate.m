@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "WorkoutsController.h"
 #import "SignInViewController.h"
 
 @implementation AppDelegate
@@ -16,10 +16,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
     if ([AppDelegate isSignedIn]) {
-        ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        WorkoutsController *workoutsController = [[WorkoutsController alloc] initWithSunday:YES];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:workoutsController];
     } else {
         SignInViewController *signInController = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:signInController];
@@ -35,28 +34,28 @@
     return @"http://localhost:3000";
 }
 
-+ (NSString *)authenticationDataPlistPath
++ (NSString *)authDictionaryPath
 {
-    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent: @"AuthenticationData.plist"];
+    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent: @"Authentication.plist"];
 }
 
-+ (NSMutableDictionary *)authenticationData
++ (NSMutableDictionary *)authDictionary
 {
-    NSString *pListPath = [self authenticationDataPlistPath];
+    NSString *pListPath = [self authDictionaryPath];
     return [NSMutableDictionary dictionaryWithContentsOfFile:pListPath];
 }
 
-+ (NSString *)apiKey
++ (id)getValueForKey:(id)key
 {
-    return [[self authenticationData] objectForKey:@"api_key"];
+    return [[self authDictionary] objectForKey:key];
 }
 
-+ (void)setApiKey:(NSString *)apiKey
++ (void)setValue:(id)value forKey:(NSString *)key
 {
-    NSMutableDictionary *authenticationDictionary = [[NSMutableDictionary alloc] init];
-    [authenticationDictionary setDictionary:[self authenticationData]];
-    [authenticationDictionary setObject:apiKey forKey:@"api_key"];
-    if (![authenticationDictionary writeToFile:[self authenticationDataPlistPath] atomically:YES]) {
+    NSMutableDictionary *authDictionary = [[NSMutableDictionary alloc] init];
+    [authDictionary setDictionary:[self authDictionary]];
+    [authDictionary setObject:value forKey:key];
+    if (![authDictionary writeToFile:[self authDictionaryPath] atomically:YES]) {
         NSError *error;
         [NSException raise:@"SettingsException" format:@"There was a problem changing this setting.\n%@", error];
 	}
@@ -64,7 +63,7 @@
 
 + (BOOL)isSignedIn
 {
-    return [self apiKey] != nil;
+    return [(NSString *)[self getValueForKey:@"api_key"] length] > 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -91,7 +90,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    if (![AppDelegate getValueForKey:@"persist_api_key"]) {
+        [AppDelegate setValue:@"" forKey:@"api_key"];
+    }
 }
 
 @end

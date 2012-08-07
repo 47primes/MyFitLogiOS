@@ -13,6 +13,8 @@
 @property (nonatomic, retain) IBOutlet UITextField *emailTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, retain) IBOutlet UIButton *submitButton;
+@property (nonatomic, retain) IBOutlet UISwitch *persistSwitch;
+@property (nonatomic, retain) IBOutlet UILabel *signInStatusLabel;
 
 - (IBAction)signInButtonPressed;
 

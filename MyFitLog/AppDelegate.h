@@ -13,14 +13,13 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 + (NSString *)apiBaseURL;
-+ (NSString *)authenticationDataPlistPath;
-+ (NSMutableDictionary *)authenticationData;
-+ (NSString *)apiKey;
-+ (void)setApiKey:(NSString *)apiKey;
++ (NSString *)authDictionaryPath;
++ (NSMutableDictionary *)authDictionary;
++ (id)getValueForKey:(id)key;
++ (void)setValue:(id)value forKey:(NSString *)key;
 + (BOOL)isSignedIn;
 
 @end

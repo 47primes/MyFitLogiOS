@@ -13,14 +13,41 @@
 		5A0BCE5C15CF970A0029B3DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */; };
 		5A0BCE5E15CF970A0029B3DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE5D15CF970A0029B3DC /* main.m */; };
 		5A0BCE6215CF970A0029B3DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6115CF970A0029B3DC /* AppDelegate.m */; };
-		5A0BCE6515CF970A0029B3DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6415CF970A0029B3DC /* ViewController.m */; };
-		5A0BCE6815CF970A0029B3DC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE6615CF970A0029B3DC /* ViewController.xib */; };
 		5A0BCE7315CF97650029B3DC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7015CF97650029B3DC /* NSData+Base64.m */; };
 		5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7215CF97650029B3DC /* NSString+Base64.m */; };
-		5A0BCE7B15CF97B40029B3DC /* AuthenticationData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */; };
+		5A0BCE7B15CF97B40029B3DC /* Authentication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7A15CF97B40029B3DC /* Authentication.plist */; };
 		5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BDABF15CFE537004590A4 /* SignInViewController.m */; };
 		5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5BDAC015CFE537004590A4 /* SignInViewController.xib */; };
+		5A5BDADA15D0C5D4004590A4 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A5BDAD315D0C5D4004590A4 /* TapkuLibrary.bundle */; };
+		5A5BDAE315D0C666004590A4 /* WorkoutsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BDAE215D0C666004590A4 /* WorkoutsController.m */; };
+		5A5BDAE615D0C6F5004590A4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDADE15D0C5D5004590A4 /* libTapkuLibrary.a */; };
+		5A5BDAE915D0C70A004590A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDAE715D0C70A004590A4 /* MapKit.framework */; };
+		5A5BDAEA15D0C70A004590A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDAE815D0C70A004590A4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A5BDADD15D0C5D5004590A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		5A5BDADF15D0C5D5004590A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		5A5BDAE415D0C6DE004590A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5A0BCE4D15CF970A0029B3DC /* MyFitLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,17 +60,20 @@
 		5A0BCE5F15CF970A0029B3DC /* MyFitLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFitLog-Prefix.pch"; sourceTree = "<group>"; };
 		5A0BCE6015CF970A0029B3DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A0BCE6115CF970A0029B3DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5A0BCE6315CF970A0029B3DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5A0BCE6415CF970A0029B3DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5A0BCE6715CF970A0029B3DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		5A0BCE6F15CF97650029B3DC /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		5A0BCE7015CF97650029B3DC /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		5A0BCE7115CF97650029B3DC /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		5A0BCE7215CF97650029B3DC /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthenticationData.plist; sourceTree = "<group>"; };
+		5A0BCE7A15CF97B40029B3DC /* Authentication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Authentication.plist; sourceTree = "<group>"; };
 		5A5BDABE15CFE537004590A4 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		5A5BDABF15CFE537004590A4 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		5A5BDAC015CFE537004590A4 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		5A5BDAD315D0C5D4004590A4 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		5A5BDAE115D0C666004590A4 /* WorkoutsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsController.h; sourceTree = "<group>"; };
+		5A5BDAE215D0C666004590A4 /* WorkoutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsController.m; sourceTree = "<group>"; };
+		5A5BDAE715D0C70A004590A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5A5BDAE815D0C70A004590A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5BDAE915D0C70A004590A4 /* MapKit.framework in Frameworks */,
+				5A5BDAEA15D0C70A004590A4 /* QuartzCore.framework in Frameworks */,
+				5A5BDAE615D0C6F5004590A4 /* libTapkuLibrary.a in Frameworks */,
 				5A0BCE5215CF970A0029B3DC /* UIKit.framework in Frameworks */,
 				5A0BCE5415CF970A0029B3DC /* Foundation.framework in Frameworks */,
 				5A0BCE5615CF970A0029B3DC /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +96,10 @@
 		5A0BCE4215CF970A0029B3DC = {
 			isa = PBXGroup;
 			children = (
+				5A5BDAE715D0C70A004590A4 /* MapKit.framework */,
+				5A5BDAE815D0C70A004590A4 /* QuartzCore.framework */,
+				5A5BDAD315D0C5D4004590A4 /* TapkuLibrary.bundle */,
+				5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */,
 				5A0BCE5715CF970A0029B3DC /* MyFitLog */,
 				5A0BCE5015CF970A0029B3DC /* Frameworks */,
 				5A0BCE4E15CF970A0029B3DC /* Products */,
@@ -92,14 +129,13 @@
 			children = (
 				5A0BCE6015CF970A0029B3DC /* AppDelegate.h */,
 				5A0BCE6115CF970A0029B3DC /* AppDelegate.m */,
-				5A0BCE6315CF970A0029B3DC /* ViewController.h */,
-				5A0BCE6415CF970A0029B3DC /* ViewController.m */,
-				5A0BCE6615CF970A0029B3DC /* ViewController.xib */,
 				5A0BCE5815CF970A0029B3DC /* Supporting Files */,
 				5A0BCE6E15CF97650029B3DC /* Base64 */,
 				5A5BDABE15CFE537004590A4 /* SignInViewController.h */,
 				5A5BDABF15CFE537004590A4 /* SignInViewController.m */,
 				5A5BDAC015CFE537004590A4 /* SignInViewController.xib */,
+				5A5BDAE115D0C666004590A4 /* WorkoutsController.h */,
+				5A5BDAE215D0C666004590A4 /* WorkoutsController.m */,
 			);
 			path = MyFitLog;
 			sourceTree = "<group>";
@@ -107,7 +143,7 @@
 		5A0BCE5815CF970A0029B3DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A0BCE7A15CF97B40029B3DC /* AuthenticationData.plist */,
+				5A0BCE7A15CF97B40029B3DC /* Authentication.plist */,
 				5A0BCE5915CF970A0029B3DC /* MyFitLog-Info.plist */,
 				5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */,
 				5A0BCE5D15CF970A0029B3DC /* main.m */,
@@ -127,6 +163,15 @@
 			path = Base64;
 			sourceTree = "<group>";
 		};
+		5A5BDAD515D0C5D4004590A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A5BDADE15D0C5D5004590A4 /* libTapkuLibrary.a */,
+				5A5BDAE015D0C5D5004590A4 /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +186,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5A5BDAE515D0C6DE004590A4 /* PBXTargetDependency */,
 			);
 			name = MyFitLog;
 			productName = MyFitLog;
@@ -166,6 +212,12 @@
 			mainGroup = 5A0BCE4215CF970A0029B3DC;
 			productRefGroup = 5A0BCE4E15CF970A0029B3DC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5A5BDAD515D0C5D4004590A4 /* Products */;
+					ProjectRef = 5A5BDAD415D0C5D4004590A4 /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5A0BCE4C15CF970A0029B3DC /* MyFitLog */,
@@ -173,15 +225,32 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		5A5BDADE15D0C5D5004590A4 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = 5A5BDADD15D0C5D5004590A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5A5BDAE015D0C5D5004590A4 /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = 5A5BDADF15D0C5D5004590A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		5A0BCE4B15CF970A0029B3DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5A0BCE5C15CF970A0029B3DC /* InfoPlist.strings in Resources */,
-				5A0BCE6815CF970A0029B3DC /* ViewController.xib in Resources */,
-				5A0BCE7B15CF97B40029B3DC /* AuthenticationData.plist in Resources */,
+				5A0BCE7B15CF97B40029B3DC /* Authentication.plist in Resources */,
 				5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */,
+				5A5BDADA15D0C5D4004590A4 /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,14 +263,22 @@
 			files = (
 				5A0BCE5E15CF970A0029B3DC /* main.m in Sources */,
 				5A0BCE6215CF970A0029B3DC /* AppDelegate.m in Sources */,
-				5A0BCE6515CF970A0029B3DC /* ViewController.m in Sources */,
 				5A0BCE7315CF97650029B3DC /* NSData+Base64.m in Sources */,
 				5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */,
 				5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */,
+				5A5BDAE315D0C666004590A4 /* WorkoutsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A5BDAE515D0C6DE004590A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = 5A5BDAE415D0C6DE004590A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A0BCE5A15CF970A0029B3DC /* InfoPlist.strings */ = {
@@ -210,14 +287,6 @@
 				5A0BCE5B15CF970A0029B3DC /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5A0BCE6615CF970A0029B3DC /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A0BCE6715CF970A0029B3DC /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -277,7 +346,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFitLog/MyFitLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/mbradford/47Primes/tapkulibrary/src/**";
 				INFOPLIST_FILE = "MyFitLog/MyFitLog-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,7 +362,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFitLog/MyFitLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/mbradford/47Primes/tapkulibrary/src/**";
 				INFOPLIST_FILE = "MyFitLog/MyFitLog-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
