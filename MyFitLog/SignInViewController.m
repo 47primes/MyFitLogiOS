@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.persistSwitch.on = [AppDelegate isPersistingApiKey];
 }
 
 - (void)viewDidUnload
@@ -75,10 +76,8 @@
             if ([response statusCode] == 200) {
                 NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
                 [AppDelegate setValue:[json valueForKey:@"api_key"] forKey:@"api_key"];
-                [AppDelegate setValue:(self.persistSwitch.on ? @"1" : @"0") forKey:@"persist_api_key"];
-                
-                WorkoutsController *workoutsController = [[WorkoutsController alloc] initWithSunday:YES];
-                [self.navigationController pushViewController:workoutsController animated:YES];
+                [AppDelegate setValue:(self.persistSwitch.on ? @"YES" : @"NO") forKey:@"persist_api_key"];
+                [self.parentViewController dismissModalViewControllerAnimated:YES];
             } else {
                 self.signInStatusLabel.hidden = NO;
             }

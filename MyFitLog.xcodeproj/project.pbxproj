@@ -16,6 +16,7 @@
 		5A0BCE7315CF97650029B3DC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7015CF97650029B3DC /* NSData+Base64.m */; };
 		5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7215CF97650029B3DC /* NSString+Base64.m */; };
 		5A0BCE7B15CF97B40029B3DC /* Authentication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BCE7A15CF97B40029B3DC /* Authentication.plist */; };
+		5A24ED0815D245950062F7FF /* RoutinesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A24ED0715D245950062F7FF /* RoutinesTableViewController.m */; };
 		5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BDABF15CFE537004590A4 /* SignInViewController.m */; };
 		5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5BDAC015CFE537004590A4 /* SignInViewController.xib */; };
 		5A5BDADA15D0C5D4004590A4 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A5BDAD315D0C5D4004590A4 /* TapkuLibrary.bundle */; };
@@ -65,6 +66,8 @@
 		5A0BCE7115CF97650029B3DC /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		5A0BCE7215CF97650029B3DC /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		5A0BCE7A15CF97B40029B3DC /* Authentication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Authentication.plist; sourceTree = "<group>"; };
+		5A24ED0615D245950062F7FF /* RoutinesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutinesTableViewController.h; sourceTree = "<group>"; };
+		5A24ED0715D245950062F7FF /* RoutinesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutinesTableViewController.m; sourceTree = "<group>"; };
 		5A5BDABE15CFE537004590A4 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		5A5BDABF15CFE537004590A4 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		5A5BDAC015CFE537004590A4 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -129,13 +132,15 @@
 			children = (
 				5A0BCE6015CF970A0029B3DC /* AppDelegate.h */,
 				5A0BCE6115CF970A0029B3DC /* AppDelegate.m */,
-				5A0BCE5815CF970A0029B3DC /* Supporting Files */,
-				5A0BCE6E15CF97650029B3DC /* Base64 */,
 				5A5BDABE15CFE537004590A4 /* SignInViewController.h */,
 				5A5BDABF15CFE537004590A4 /* SignInViewController.m */,
 				5A5BDAC015CFE537004590A4 /* SignInViewController.xib */,
 				5A5BDAE115D0C666004590A4 /* WorkoutsController.h */,
 				5A5BDAE215D0C666004590A4 /* WorkoutsController.m */,
+				5A24ED0615D245950062F7FF /* RoutinesTableViewController.h */,
+				5A24ED0715D245950062F7FF /* RoutinesTableViewController.m */,
+				5A0BCE5815CF970A0029B3DC /* Supporting Files */,
+				5A0BCE6E15CF97650029B3DC /* Base64 */,
 			);
 			path = MyFitLog;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				5A0BCE7415CF97650029B3DC /* NSString+Base64.m in Sources */,
 				5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */,
 				5A5BDAE315D0C666004590A4 /* WorkoutsController.m in Sources */,
+				5A24ED0815D245950062F7FF /* RoutinesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

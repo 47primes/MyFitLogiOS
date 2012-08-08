@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "WorkoutsController.h"
-#import "SignInViewController.h"
 
 @implementation AppDelegate
 
@@ -16,16 +15,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    if ([AppDelegate isSignedIn]) {
-        WorkoutsController *workoutsController = [[WorkoutsController alloc] initWithSunday:YES];
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:workoutsController];
-    } else {
-        SignInViewController *signInController = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:signInController];
-    }
+    WorkoutsController *workoutsController = [[WorkoutsController alloc] initWithSunday:YES];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:workoutsController];
     
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -45,12 +40,12 @@
     return [NSMutableDictionary dictionaryWithContentsOfFile:pListPath];
 }
 
-+ (id)getValueForKey:(id)key
++ (NSString *)getValueForKey:(NSString *)key
 {
     return [[self authDictionary] objectForKey:key];
 }
 
-+ (void)setValue:(id)value forKey:(NSString *)key
++ (void)setValue:(NSString *)value forKey:(NSString *)key
 {
     NSMutableDictionary *authDictionary = [[NSMutableDictionary alloc] init];
     [authDictionary setDictionary:[self authDictionary]];
@@ -64,6 +59,11 @@
 + (BOOL)isSignedIn
 {
     return [(NSString *)[self getValueForKey:@"api_key"] length] > 0;
+}
+
++ (BOOL)isPersistingApiKey
+{
+    return [self getValueForKey:@"persist_api_key"] == @"YES";
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -90,7 +90,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    if (![AppDelegate getValueForKey:@"persist_api_key"]) {
+    if (![AppDelegate isPersistingApiKey]) {
         [AppDelegate setValue:@"" forKey:@"api_key"];
     }
 }

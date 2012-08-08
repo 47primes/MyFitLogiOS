@@ -18,8 +18,9 @@
 + (NSString *)apiBaseURL;
 + (NSString *)authDictionaryPath;
 + (NSMutableDictionary *)authDictionary;
-+ (id)getValueForKey:(id)key;
-+ (void)setValue:(id)value forKey:(NSString *)key;
++ (NSString *)getValueForKey:(NSString *)key;
++ (void)setValue:(NSString *)value forKey:(NSString *)key;
 + (BOOL)isSignedIn;
++ (BOOL)isPersistingApiKey;
 
 @end

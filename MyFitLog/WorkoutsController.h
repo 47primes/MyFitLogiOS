@@ -9,5 +9,5 @@
 #import "TKCalendarMonthTableViewController.h"
 
 @interface WorkoutsController : TKCalendarMonthTableViewController
-
+@property (nonatomic, retain) NSArray *workouts;
 @end
