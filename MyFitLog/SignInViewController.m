@@ -77,7 +77,7 @@
                 NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
                 [AppDelegate setValue:[json valueForKey:@"api_key"] forKey:@"api_key"];
                 [AppDelegate setValue:(self.persistSwitch.on ? @"YES" : @"NO") forKey:@"persist_api_key"];
-                [self.parentViewController dismissModalViewControllerAnimated:YES];
+                [self dismissModalViewControllerAnimated:YES];
             } else {
                 self.signInStatusLabel.hidden = NO;
             }

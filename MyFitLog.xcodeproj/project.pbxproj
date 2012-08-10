@@ -24,6 +24,9 @@
 		5A5BDAE615D0C6F5004590A4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDADE15D0C5D5004590A4 /* libTapkuLibrary.a */; };
 		5A5BDAE915D0C70A004590A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDAE715D0C70A004590A4 /* MapKit.framework */; };
 		5A5BDAEA15D0C70A004590A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5BDAE815D0C70A004590A4 /* QuartzCore.framework */; };
+		5A8A546115D54BBC00DB52FC /* ExercisesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A546015D54BBC00DB52FC /* ExercisesTableViewController.m */; };
+		5A8A546815D55AB800DB52FC /* CreateRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A546615D55AB800DB52FC /* CreateRoutineViewController.m */; };
+		5A8A546915D55AB800DB52FC /* CreateRoutineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8A546715D55AB800DB52FC /* CreateRoutineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,11 @@
 		5A5BDAE215D0C666004590A4 /* WorkoutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsController.m; sourceTree = "<group>"; };
 		5A5BDAE715D0C70A004590A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5A5BDAE815D0C70A004590A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5A8A545F15D54BBC00DB52FC /* ExercisesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisesTableViewController.h; sourceTree = "<group>"; };
+		5A8A546015D54BBC00DB52FC /* ExercisesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisesTableViewController.m; sourceTree = "<group>"; };
+		5A8A546515D55AB800DB52FC /* CreateRoutineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateRoutineViewController.h; sourceTree = "<group>"; };
+		5A8A546615D55AB800DB52FC /* CreateRoutineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateRoutineViewController.m; sourceTree = "<group>"; };
+		5A8A546715D55AB800DB52FC /* CreateRoutineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateRoutineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,11 @@
 				5A5BDAE215D0C666004590A4 /* WorkoutsController.m */,
 				5A24ED0615D245950062F7FF /* RoutinesTableViewController.h */,
 				5A24ED0715D245950062F7FF /* RoutinesTableViewController.m */,
+				5A8A546515D55AB800DB52FC /* CreateRoutineViewController.h */,
+				5A8A546615D55AB800DB52FC /* CreateRoutineViewController.m */,
+				5A8A546715D55AB800DB52FC /* CreateRoutineViewController.xib */,
+				5A8A545F15D54BBC00DB52FC /* ExercisesTableViewController.h */,
+				5A8A546015D54BBC00DB52FC /* ExercisesTableViewController.m */,
 				5A0BCE5815CF970A0029B3DC /* Supporting Files */,
 				5A0BCE6E15CF97650029B3DC /* Base64 */,
 			);
@@ -256,6 +269,7 @@
 				5A0BCE7B15CF97B40029B3DC /* Authentication.plist in Resources */,
 				5A5BDAC215CFE537004590A4 /* SignInViewController.xib in Resources */,
 				5A5BDADA15D0C5D4004590A4 /* TapkuLibrary.bundle in Resources */,
+				5A8A546915D55AB800DB52FC /* CreateRoutineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +287,8 @@
 				5A5BDAC115CFE537004590A4 /* SignInViewController.m in Sources */,
 				5A5BDAE315D0C666004590A4 /* WorkoutsController.m in Sources */,
 				5A24ED0815D245950062F7FF /* RoutinesTableViewController.m in Sources */,
+				5A8A546115D54BBC00DB52FC /* ExercisesTableViewController.m in Sources */,
+				5A8A546815D55AB800DB52FC /* CreateRoutineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

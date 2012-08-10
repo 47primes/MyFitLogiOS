@@ -16,24 +16,20 @@
 
 @interface WorkoutsController ()
 - (void)getWorkouts;
+- (void)signOut;
 @end
 
 @implementation WorkoutsController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(getWorkouts) object:nil];
     [thread start];
+    
+    UIBarButtonItem *signOutButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(signOut)];
+    
+    self.navigationItem.rightBarButtonItem = signOutButtonItem;
 }
 
 - (void)getWorkouts
@@ -50,12 +46,17 @@
             NSError *error;
             NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
             if ([response statusCode] == 200) {
-                self.workouts = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+                self.workouts = [[NSMutableArray alloc] initWithArray:[NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error]];
                 [self.tableView reloadData];
                 [self.monthView reload];
             }
         });
     }
+}
+
+- (void)signOut
+{
+    [AppDelegate setValue:@"" forKey:@"api_key"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -153,7 +154,41 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSDictionary *workout = [self.workouts objectAtIndex:indexPath.row];
+        NSString *workoutID = [workout objectForKey:@"id"];
+        [self.workouts removeObjectAtIndex:indexPath.row];
+        
+        NSURL *destroyURL = [NSURL URLWithString: [NSString stringWithFormat:@"%@/user/workouts/%d.json", [AppDelegate apiBaseURL], [workoutID intValue]]];
+        
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:destroyURL];
+        [request setValue:@"application/vnd.my_fit_log.v2" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"MyFitLog iOS" forHTTPHeaderField:@"User-Agent"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[AppDelegate getValueForKey:@"api_key"] forHTTPHeaderField:@"From"];
+        [request setHTTPMethod:@"DELETE"];
+        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView reloadData];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
+
 #pragma mark - Table view delegate
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return UITableViewCellEditingStyleDelete;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

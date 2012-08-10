@@ -8,11 +8,12 @@
 
 #import "RoutinesTableViewController.h"
 #import "AppDelegate.h"
+#import "CreateRoutineViewController.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
 @interface RoutinesTableViewController ()
-
+- (void)addRoutine;
 @end
 
 @implementation RoutinesTableViewController
@@ -32,11 +33,16 @@
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.routines = [NSMutableArray arrayWithArray:[self.workout objectForKey:@"routines"]];
+    
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addRoutine)];
+    self.navigationItem.rightBarButtonItem = addButtonItem;
 }
 
-- (void)viewDidUnload
+- (void)addRoutine
 {
-    [super viewDidUnload];
+    CreateRoutineViewController *controller = [[CreateRoutineViewController alloc] initWithNibName:@"CreateRoutineViewController" bundle:nil];
+    controller.workout = self.workout;
+    [self presentModalViewController:controller animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
